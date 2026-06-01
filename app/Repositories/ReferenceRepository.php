@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Departments;
 use App\Models\Locations;
-use App\Models\Prodlines;
+use App\Models\ProdLines;
 use App\Models\Stations;
 
 class ReferenceRepository
@@ -33,7 +33,7 @@ class ReferenceRepository
 
     public function getProdlinesByIds(array $ids)
     {
-        return Prodlines::whereIn('PLID', $ids)
+        return ProdLines::whereIn('PLID', $ids)
             ->get()
             ->keyBy('PLID');
     }

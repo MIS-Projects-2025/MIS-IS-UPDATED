@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Models\Departments;
 use App\Models\Locations;
 use App\Models\Masterlist;
-use App\Models\Prodlines;
+use App\Models\ProdLines;
 use App\Models\Stations;
 use Illuminate\Support\Facades\Log;
 
@@ -162,7 +162,7 @@ class UserRepository
     }
     public function getProdlineOptions()
     {
-        return Prodlines::select('PLID', 'PLNAME')
+        return ProdLines::select('PLID', 'PLNAME')
             ->distinct()
             ->orderBy('PLNAME')
             ->get()

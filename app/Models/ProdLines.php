@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Prodlines extends Model
+class ProdLines extends Model
 {
     protected $connection = 'masterlist';
     protected $table = 'tblpls';
